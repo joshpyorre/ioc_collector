@@ -1,5 +1,7 @@
 ## map IP's by location and put them on a map
 
+![Map Example](map.png)
+
 # Installation:
 
 ## Mongodb is required to store already analyzed IPs

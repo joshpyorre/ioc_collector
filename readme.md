@@ -53,3 +53,5 @@ To do: This only looks up the SHA256. I will modify it soon to get the A record 
 # If you want to put the IP's on a map:
 
 1. See the readme in the WEB directory. When the flask app is running, just upload your text file (darkside_raw_vt_results.txt in this example)
+
+![Map Example](web/map.png)
