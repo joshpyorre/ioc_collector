@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Phishing URL GEO Analysis{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="/static/css/leaflet.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <script src="/static/js/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">home</a></li>
+            <li><a href="/geo_urls">Upload GEO URLs</a></li>
+            <li><a href="/database-entries">Current GEO Entries</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>

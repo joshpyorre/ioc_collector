@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}IP Locations{% endblock %}
+
+{% block content %}
+<h1>IP Locations</h1>
+
+    <div id="map" style="height: 500px; width: 100%; margin-top: 20px;"></div>
+
+    <h2>Statistics</h2>
+    <p><strong>Failed IP Lookups:</strong> {{ failures }}</p>
+
+    <div style="width: 50%; margin: auto;">
+        <canvas id="countryChart"></canvas>
+    </div>
+
+    <h3>IPs Per Country</h3>
+    <ul>
+        {% if country_stats %}
+            {% for country, count in country_stats.items() %}
+                <li>{{ country }}: {{ count }} IPs</li>
+            {% endfor %}
+        {% else %}
+            <li>No data available.</li>
+        {% endif %}
+    </ul>
+
+    <!-- Pass data from FastAPI to JavaScript -->
+    <script>
+        {% if map_data %}
+            window.mapData = {{ map_data | tojson }};
+            const chartData = {{ chart_data | tojson }};
+        {% endif %}
+    </script>
+    <script src="/static/js/mapurls.js"></script>
+
+{% endblock %}

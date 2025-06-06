@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pandas
+geoip2
+jinja2
+pymongo
+dnspython
+tldextract

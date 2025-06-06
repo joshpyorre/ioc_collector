@@ -1,0 +1,296 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Set font size and padding for table cells */
+td {
+    vertical-align: top;
+    font-size: 11px;
+    padding: 8px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+th {
+    background-color: #bfb9b9;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+img {
+    border-radius: 5px;
+}
+
+/* Container styling for each thumbnail with text */
+.table-extracted-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 100px; /* Limit the container width */
+}
+
+.table-extracted-text-entry {
+    text-align: center;
+}
+
+.table-extracted-text img {
+    width: 100px; /* Consistent width for thumbnails */
+    border-radius: 5px;
+}
+
+.table-extracted-text span {
+    font-size: 10px;
+    color: #333;
+    display: block;
+    margin-top: 5px; /* Space between image and text */
+}
+
+/* Narrower column for OmniParse Text with wrapping */
+.table-omniparse-text {
+    max-width: 150px; /* Set desired width */
+    word-wrap: break-word; /* Wrap long words to fit within the column */
+    font-size: 10px; /* Smaller font size for readability */
+    line-height: 1.4; /* Adjust line height for better spacing */
+}
+
+/* Styling for Classification text in a readable format */
+.table-classification-text {
+    font-size: 10px;
+    line-height: 1.2; /* Slightly tighter line spacing */
+}
+
+.table-classification-text div {
+    margin-bottom: 2px; /* Minimal space between entries */
+}
+
+
+h1, h2, h3 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#progress-container {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#map {
+    border: 2px solid #2c3e50;
+    border-radius: 5px;
+}
+
+canvas {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+nav {
+    background-color: #2c3e50; /* Darker background for contrast */
+    padding: 0px 0; /* Adds some vertical space */
+    width: 100%; /* Full width of the viewport */
+    box-sizing: border-box; /* Include padding in the total width */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0 auto; /* Center the ul */
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Align the items vertically */
+    max-width: 1200px; /* Set a max width for better readability */
+    width: 100%; /* Ensure ul takes full width */
+}
+
+nav ul li {
+    margin: 0 20px; /* More space between navigation items */
+}
+
+nav ul li a {
+    color: #ecf0f1; /* Light text color for contrast */
+    text-transform: uppercase; /* Makes the text look cleaner */
+    font-weight: 100; /* Slightly bold for readability */
+    padding: 5px 5px; /* Adds more space around the text */
+    text-decoration: none;
+    display: inline-block; /* Make the link behave like a button */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+    background-color: #34495e; /* Subtle background change on hover */
+    color: #ffffff; /* Brighter white on hover for better contrast */
+    border-radius: 5px; /* Adds a little roundness for a modern touch */
+}
+
+/* Dropdown Menu */
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: #2c3e50;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content li a {
+    padding: 10px 15px;
+    text-align: left; /* Left align for dropdown items */
+}
+
+.dropdown-content li a:hover {
+    background-color: #34495e;
+}
+
+
+.content {
+    margin-top: 20px;
+}
+
+/* timeline */
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+.axis text {
+    font-family: sans-serif;
+    font-size: 10px;
+}
+.timeline-label {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+.timeline {
+    margin-bottom: 40px;
+}
+.thumbnail {
+    position: absolute;
+    display: none;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #333;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.coloredDiv {
+    height: 20px;
+    width: 20px;
+    float: left;
+}
+
+/* For  the timeline display, when hovering over an image on the timeline */
+#hover_details {
+    font-family: Arial, sans-serif;
+    font-size: 12px; /* Default font size for text in the #details div */
+    color: #333; /* Default text color */
+}
+
+.hover_details-image {
+    width: 200px; /* Set the image width */
+}
+
+.hover_details-text {
+    font-size: 12px; 
+    color: #666; /* Set the color for text (ID and Date) */
+}
+
+.legend-container {
+    position: fixed;        /* This makes the legend stay on the screen when scrolling */
+    top: 200px;              /* Adjust this value to control vertical positioning */
+    right: 10px;            /* Adjust this value to control horizontal positioning */
+    background-color: white; /* Add a background to make it more readable */
+    border: 1px solid #ccc; /* Optional: add a border */
+    padding: 10px;          /* Add some padding for better spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visibility */
+    z-index: 1000;          /* Ensures it stays on top of other elements */
+}
+.legend-item {
+    margin-bottom: 10px;    /* Add spacing between legend items */
+}
+.legend-color-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* for documentation page */
+pre {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 10px;
+    overflow-x: auto;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+pre code {
+    font-size: 10px; /* Adjust this size as needed */
+    line-height: 1.4; /* Adjust line height for readability */
+}
+
+.code-block {
+    display: block;
+    padding: 0;
+    background: none;
+}
+
+pre code span {
+    color: #66d9ef; /* Default text color */
+}
+
+pre code .keyword {
+    color: #f92672; /* Keywords */
+}
+
+pre code .function {
+    color: #a6e22e; /* Function names */
+}
+
+pre code .string {
+    color: #e6db74; /* Strings */
+}
