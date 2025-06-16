@@ -1,5 +1,7 @@
 # Build a list of historical IOCs based off a keyword search on abuse.ch, and geo-map it if needed
 
+It looks up the A record from any URLs/Domains/SHA/MD5.
+
 In this example, I'm searching for darkside:
 
 1. Go to https://threatfox.abuse.ch/browse.php?search=malware%3Adarkside
@@ -21,11 +23,12 @@ Save that text file and go to the next step.
 
 2. Run the following script to look up SHA256 items in VirusTotal. 
 - You will need to enter your VT key at the top of the script. 
-- It takes a moment to run depending on how many items you have in the list. It's recommended to pipe the output to a new file:
+- It takes a moment to run depending on how many items you have in the list.
+- It will save results to a csv.
 
-`python3 parse_text_from_abuse_ch_and_VTlookup.py darkside_raw.txt > darkside_raw_vt_results.txt`
+`python3 parse_text_from_abuse_ch_and_VTlookup.py darkside_raw.txt`
 
-3. darkside_raw_vt_results.txt will look like this:
+3. The CSV of results will look like this:
 
 ```
 2024-07-27 16:06,http://darksidfqzcuhtk2.onion/2AHUVJ3VGS97NUG5J5EYMQM5PJO77V9V0GDT3UYIJGFZUTOQRLUX593CQ2EZ2ZEH,darksidfqzcuhtk2.onion,darkside
@@ -47,8 +50,6 @@ The items are:
 - registration date
 
 A note about registration date: This is called event_date (under the event_action: "registration" from the VT results). It refers to the registration date of the IP address allocation within the context of the RDAP (Registration Data Access Protocol) data returned by a Regional Internet Registry (RIR) such as RIPE, ARIN, APNIC, etc.
-
-To do: This only looks up the SHA256. I will modify it soon to get the A record from any URLs/Domains.
 
 # If you want to put the IP's on a map:
 
